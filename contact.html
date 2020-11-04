@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zolutions IT - Software Development Company - Contact us</title>
+    <script
+      src="https://kit.fontawesome.com/3b2575b8e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-contact.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <nav>
+          <a class="nav-brand" href="index.html">
+            <img
+              class="logo"
+              src="img/companylogo.png"
+              width="30"
+              height="30"
+              alt="companylogo"
+            />
+            Zolutions IT
+          </a>
+
+          <div class="navbar-links">
+            <ul class="nav-linklist" id="hamburger">
+              <li>
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link" href="partners.html">Partners</a>
+              </li>
+              <li>
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li>
+                <a class="nav-link-active" href="#">Contact</a>
+              </li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="main-div">
+          <h1 class="main-header">Contact us</h1>
+
+          <form
+            class="contact-form"
+            action="mailto:info@zolutionsit.com"
+            method="GET"
+          >
+            <label for="name">Name:</label>
+            <input
+              required="required"
+              type="text"
+              name="name"
+              id="name"
+              maxlength="30"
+              placeholder="Name.."
+            />
+            <label for="email">Email:</label>
+            <input
+              required="required"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email.."
+            />
+            <label for="message">Message:</label>
+            <textarea
+              required="required"
+              name="message"
+              id="message"
+              cols="50"
+              rows="10"
+              placeholder="Enter your message here..."
+            ></textarea>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-top">
+          <div class="footer-links">
+            <h5 class="h5-footer">Follow Us</h5>
+
+            <div class="social-logo">
+              <!-- Facebook -->
+              <a href="http://facebook.com" target="_blank">
+                <i class="fa fa-facebook"></i> Facebook
+              </a>
+              <!-- Twitter -->
+              <a href="http://twitter.com" target="_blank">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+              <!-- Instagram +-->
+              <a href="http://instagram.com" target="_blank">
+                <i class="fa fa-instagram"></i> Instagram
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-adress">
+            <h5 class="h5-footer">Contact</h5>
+
+            <ul class="footer-adress-list">
+              <li>
+                <p><i class="fas fa-home"></i> Malmo, 21141, SE</p>
+              </li>
+              <li>
+                <p><i class="fas fa-envelope"></i> info@ZolutionsIT.com</p>
+              </li>
+              <li>
+                <p><i class="fas fa-phone"></i> + 46 123 456 789</p>
+              </li>
+              <li>
+                <p><i class="fas fa-print"></i> + 46 123 456 789</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            Copyright © 2020 Zolutions IT.<span class="bold">
+              All Rights Reserved</span
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("hamburger");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "flex";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 75rem;
+  grid-template-areas:
+    "head head"
+    "news  main"
+    "foot  foot";
+  grid-template-rows: 60px 1fr 285px;
+  grid-template-columns: 350px 1fr;
+}
+
+.grid-container > .news {
+  grid-area: news;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  margin: 10px 0;
+}
+
+.grid-container > main {
+  grid-area: main;
+  background-color: #ffffff;
+  text-align: center;
+  height: 100%;
+  margin: 10px 20px;
+}
+
+.main-content {
+  padding: 0 4%;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  text-align: left;
+}
+
+.p-center {
+  text-align: center;
+}
+
+.news-group {
+  background: #dbdbdbad;
+  border: solid 1px gray;
+  border-radius: 10px;
+  color: #343a40;
+  width: 309px;
+  margin-left: 20px;
+  height: 820px;
+  box-shadow: 10px 10px #343a40;
+}
+
+.news-articles {
+  overflow-y: scroll;
+  height: 757px;
+}
+
+.news-articles::-webkit-scrollbar {
+  display: unset;
+  width: 7px;
+}
+
+/* Track */
+.news-articles::-webkit-scrollbar-track {
+  background: #d8d8d8;
+}
+
+/* Handle */
+.news-articles::-webkit-scrollbar-thumb {
+  background: rgb(189, 188, 188);
+}
+
+/* Handle on hover */
+.news-articles::-webkit-scrollbar-thumb:hover {
+  background: rgb(168, 168, 168);
+}
+
+.main-header {
+  border-bottom: solid 1px black;
+  background-color: #4caf50;
+  color: #343a40;
+  height: 50px;
+  margin-top: 0;
+  padding-top: 5px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.main-div {
+  border: solid 1px #7b7b7b;
+  border-radius: 10px;
+  background-color: #dbdbdbad;
+  height: 820px;
+  width: 98%;
+  box-shadow: 10px 10px #343a40;
+}
+
+.main-div ul {
+  text-align: left;
+  font-weight: 600;
+}
+
+.main-div ul li {
+  margin: 5px;
+}
+
+.content-h2 {
+  color: #4caf50;
+  font-weight: 900;
+}
+
+.codeImgText-startpage {
+  font-size: 10pt;
+  margin-top: 2px;
+  margin-left: 51px;
+  text-align: center;
+  width: 300px;
+  font-weight: 600;
+}
+
+.codeImg-startpage {
+  width: 300px;
+  height: 450px;
+  margin-top: 80px;
+  margin-left: 50px;
+  margin-right: 0;
+}
+
+.news-content {
+  padding: 0px 30px;
+  border-bottom: solid 2px #4caf50;
+}
+
+.news-content h4 {
+  margin-top: 0px;
+}
+
+.news-content h3 {
+  color: #4caf50;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .grid-container {
+    grid-template-areas:
+      "head"
+      "main"
+      "news"
+      "foot";
+
+    grid-template-rows: 60px 1fr 1fr 285px;
+    grid-template-columns: 1fr;
+    height: 130rem;
+  }
+
+  .news-group {
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  .news {
+    margin: 0;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+
+  .main-div {
+    width: 96%;
+  }
+
+  @media only screen and (max-width: 1129px) {
+    .grid-container {
+      height: 135rem;
+    }
+    .main-div {
+      height: 900px;
+    }
+  }
+
+  @media only screen and (max-width: 1043px) {
+    .grid-container {
+      height: 145rem;
+    }
+    .main-div {
+      height: 1045px;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .main-content {
+      flex-direction: column;
+    }
+    .grid-container {
+      height: 168rem;
+    }
+    .main-div {
+      height: 1445px;
+    }
+    .codeImgText-startpage {
+      margin: auto;
+    }
+    .codeImg-startpage {
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    .nav-linklist {
+      display: none;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      position: absolute;
+      right: 0px;
+      top: 43px;
+      height: 50px;
+      width: 100%;
+      background-color: #1d2124;
+    }
+
+    .contact-form {
+      width: 90%;
+    }
+
+    .icon {
+      display: flex;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  @media only screen and (max-width: 620px) {
+    .main-header {
+      height: 5%;
+    }
+    .grid-container {
+      height: 187rem;
+    }
+    .main-div {
+      height: 1745px;
+    }
+
+    @media only screen and (max-width: 420px) {
+      .main-header {
+        height: 7%;
+      }
+      .codeImg-startpage {
+        width: 230px;
+        height: 320px;
+      }
+      .codeImgText-startpage {
+        width: 230px;
+      }
+      .news-group {
+        width: 85%;
+      }
+    }
+
+    @media only screen and (max-width: 350px) {
+      .grid-container {
+        height: 196rem;
+      }
+      .main-div {
+        height: 1885px;
+      }
+    }
+  }
+}
